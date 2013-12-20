@@ -10,26 +10,28 @@ Download:
 
 ``` console
 $ wget -q https://raw.github.com/fumiyas/Reverb.sh/master/Reverb.sh
+$ sudo mkdir -p -m 0755 /usr/local/lib/sh
+$ sudo cp Reverb.sh /usr/local/lib/sh
+$ sudo chmod 0755 /usr/local/lib/sh/Reverb.sh
 ```
 
 Library mode:
 
 ``` console
-$ sh -c '. ./Reverb.sh; reverb Foo Bar'
+$ export PATH="/usr/local/lib/sh:$PATH"
+$ sh -c '. Reverb.sh; reverb Foo Bar'
 Foo Bar
-$ sh -c '. ./Reverb.sh; reverb Foo; reverb Bar'
+$ sh -c '. Reverb.sh; reverb Foo; reverb Bar'
 Foo
 Bar
-$ sh -c '. ./Reverb.sh; reverb -n Foo; reverb Bar'
+$ sh -c '. Reverb.sh; reverb -n Foo; reverb Bar'
 FooBar
 ```
 
 Command mode:
 
 ``` console
-$ chmod +x 0755 Reverb.sh
-$ ln -s Reverb.sh reverb
-$ ./reverb
+$ sudo ln -s /usr/local/lib/sh/Reverb.sh /usr/local/bin/reverb
 $ reverb Foo Bar
 Foo Bar
 $ reverb Foo; reverb Bar
@@ -42,8 +44,7 @@ FooBar
 にゃんぱすー mode:
 
 ``` console
-$ ln -s Reverb.sh にゃんぱすー
-$ export PATH="`pwd`:$PATH"
+$ sudo ln -s /usr/local/lib/sh/Reverb.sh /usr/local/bin/にゃんぱすー
 $ にゃんぱすー
 にゃんぱすー
 ```
