@@ -1,10 +1,10 @@
 Portable 'echo' command replacement
 ======================================================================
 
-  * Copyright (C) 2013 SATOH Fumiyasu @ OSS Technology Corp., Japan
+  * Copyright (C) 2013-2014 SATOH Fumiyasu @ OSS Technology Corp., Japan
   * License: GNU General Public License version 3
   * URL: <https://GitHub.com/fumiyas/Reverb.sh>
-  * Home: <http://fumiyas.github.io/>
+  * Home: <https://fumiyas.github.io/>
 
 Download:
 
@@ -15,7 +15,7 @@ $ sudo cp Reverb.sh /usr/local/lib/sh
 $ sudo chmod 0755 /usr/local/lib/sh/Reverb.sh
 ```
 
-Library mode:
+Shell library mode:
 
 ``` console
 $ export PATH="/usr/local/lib/sh:$PATH"

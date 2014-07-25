@@ -5,9 +5,9 @@
 #!/bin/zsh
 ##
 ## Reverb.sh: Portable 'echo' command replacement
-## Copyright (C) 2013 SATOH Fumiyasu @ OSS Technology Corp., Japan
+## Copyright (C) 2013-2014 SATOH Fumiyasu @ OSS Technology Corp., Japan
 ##               <https://GitHub.com/fumiyas/Reverb.sh>
-##               <http://fumiyas.github.io>
+##               <https://fumiyas.github.io>
 ##               <http://www.OSSTech.co.jp/>
 ##
 ## License: GNU General Public License version 3
@@ -18,8 +18,7 @@ reverb() {
     shift
     printf '%s' "$*"
   else
-    printf '%s' "$*
-"
+    printf '%s\n' "$*"
   fi
 }
 
